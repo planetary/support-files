@@ -1,0 +1,61 @@
+{
+    "disallowEmptyBlocks": true,
+    "disallowKeywords": ["with"],
+    "disallowMixedSpacesAndTabs": true,
+    "disallowMultipleLineBreaks": true,
+    "disallowMultipleLineStrings": true,
+    "disallowMultipleSpaces": true,
+    "disallowNewlineBeforeBlockStatements": true,
+    "disallowOperatorBeforeLineBreak": ["."],
+    "disallowSpaceAfterObjectKeys": true,
+    "disallowSpaceAfterPrefixUnaryOperators": true,
+    "disallowSpaceBeforePostfixUnaryOperators": true,
+    "disallowSpacesInCallExpression": true,
+    "disallowSpacesInFunction": {
+        "beforeOpeningRoundBrace": true
+    },
+    "disallowTrailingWhitespace": true,
+    "disallowYodaConditions": true,
+    "maximumLineLength": 120,
+    "requireCapitalizedComments": true,
+    "requireAnonymousFunctions": true,
+    "requireBlocksOnNewline": true,
+    "requireCamelCaseOrUpperCaseIdentifiers": "ignoreProperties",
+    "requireCapitalizedConstructors": true,
+    "requireCommaBeforeLineBreak": true,
+    "requireDollarBeforejQueryAssignment": true,
+    "requireKeywordsOnNewLine": ["else"],
+    "requireLineFeedAtFileEnd": true,
+    "requireOperatorBeforeLineBreak": true,
+    "requirePaddingNewLineAfterVariableDeclaration": true,
+    "requirePaddingNewLinesAfterBlocks": false,
+    "requirePaddingNewlinesBeforeKeywords": [
+        "for", "try", "while", "function"
+    ],
+    "requireParenthesesAroundIIFE": true,
+    "requireSemicolons": true,
+    "requireSpaceAfterBinaryOperators": true,
+    "requireSpaceAfterKeywords": ["if", "for", "while"],
+    "requireSpaceAfterLineComment": true,
+    "requireSpaceBeforeBinaryOperators": true,
+    "requireSpaceBeforeBlockStatements": true,
+    "requireSpaceBeforeObjectValues": true,
+    "requireSpaceBetweenArguments": true,
+    "requireSpacesInAnonymousFunctionExpression": {
+        "beforeOpeningCurlyBrace": true
+    },
+    "requireSpacesInConditionalExpression": true,
+    "requireSpacesInForStatement": true,
+    "requireSpacesInFunction": {
+        "beforeOpeningCurlyBrace": true
+    },
+    "requireSpacesInsideArrayBrackets": "all",
+    "requireSpacesInsideBrackets": true,
+    "requireSpacesInsideObjectBrackets": "all",
+    "requireSpacesInsideParentheses": "all",
+    "validateIndentation": 4,
+    "validateParameterSeparator": ", ",
+    "validateQuoteMarks": "'",
+    "esprima": "esprima-fb",
+    "fileExtensions": [".js", ".jsx"]
+}
