@@ -1,0 +1,10 @@
+{
+    "apps": [{
+        "name": "PROJECT NAME GOES HERE",
+        "script": "PROJECT ENTRY POINT GOES HERE",
+        "cwd": "/projects/PROJECT NAME GOES HERE/www",
+        "env": {
+            "NODE_ENV": "production"
+        },
+    }]
+}
