@@ -1,4 +1,5 @@
-# SCSS linting rules. Taken from the default configuration and modified a bit to suit the Planetary Manifest.
+# SCSS linting rules. Taken from the default configuration and modified a bit to suit the Planetary
+# Manifest.
 linters:
   BorderZero:
     enabled: true
