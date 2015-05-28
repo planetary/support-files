@@ -1,50 +1,73 @@
 {
+    "disallowDanglingUnderscores": true,
     "disallowEmptyBlocks": true,
+    "disallowFunctionDeclarations": true,
+    "disallowImplicitTypeConversion": ["numeric", "boolean", "binary", "string"],
+    "disallowKeywordsInComments": ["TODO", "FIXME"],
     "disallowKeywords": ["with"],
     "disallowMixedSpacesAndTabs": true,
-    "disallowMultipleLineBreaks": true,
     "disallowMultipleLineStrings": true,
     "disallowMultipleSpaces": true,
+    "disallowNamedUnassignedFunctions": true,
     "disallowNewlineBeforeBlockStatements": true,
-    "disallowOperatorBeforeLineBreak": ["."],
+    "disallowOperatorBeforeLineBreak": [".", "?", ":"],
+    "disallowPaddingNewlinesBeforeKeywords": ["else", "catch", "finally"],
+    "disallowSpaceAfterKeywords": ["if", "for", "while"],
     "disallowSpaceAfterObjectKeys": true,
     "disallowSpaceAfterPrefixUnaryOperators": true,
     "disallowSpaceBeforePostfixUnaryOperators": true,
     "disallowSpacesInCallExpression": true,
+    "disallowSpacesInConditionalExpression": {
+        "afterTest": true,
+        "afterConsequent": true
+    },
     "disallowSpacesInFunction": {
         "beforeOpeningRoundBrace": true
     },
+    "disallowTrailingComma": true,
     "disallowTrailingWhitespace": true,
     "disallowYodaConditions": true,
-    "maximumLineLength": 120,
-    "requireCapitalizedComments": true,
+    "maximumLineLength": 99,
     "requireAnonymousFunctions": true,
     "requireBlocksOnNewline": true,
     "requireCamelCaseOrUpperCaseIdentifiers": "ignoreProperties",
     "requireCapitalizedConstructors": true,
     "requireCommaBeforeLineBreak": true,
     "requireDollarBeforejQueryAssignment": true,
-    "requireKeywordsOnNewLine": ["else"],
+    "requireDotNotation": "except_snake_case",
+    "requireKeywordsOnNewLine": ["else", "catch", "finally"],
+    "requireLineBreakAfterVariableAssignment": true,
     "requireLineFeedAtFileEnd": true,
-    "requireOperatorBeforeLineBreak": true,
-    "requirePaddingNewLineAfterVariableDeclaration": true,
-    "requirePaddingNewLinesAfterBlocks": false,
-    "requirePaddingNewlinesBeforeKeywords": [
-        "for", "try", "while", "function"
+    "requireOperatorBeforeLineBreak": [
+        "+", "-", "*", "/", "%",
+        "=",
+        "+=", "-=", "*=", "/=", "%=",
+        "==", "===", "!=", "!==",
+        ">", "<", ">=", "<="
     ],
+    "requirePaddingNewLineAfterVariableDeclaration": true,
+    "requirePaddingNewLinesAfterBlocks": {
+        "allExcept": ["inCallExpressions", "inArrayExpressions", "inProperties"]
+    },
+    "requirePaddingNewLinesAfterUseStrict": true,
+    "requirePaddingNewLinesBeforeExport": true,
+    "requirePaddingNewlinesBeforeKeywords": [
+        "for", "try", "while", "function", "return"
+    ],
+    "requirePaddingNewLinesBeforeLineComments": {"allExcept": "firstAfterCurly"},
     "requireParenthesesAroundIIFE": true,
+    "requireQuotedKeysInObjects": true,
     "requireSemicolons": true,
     "requireSpaceAfterBinaryOperators": true,
-    "requireSpaceAfterKeywords": ["if", "for", "while"],
     "requireSpaceAfterLineComment": true,
     "requireSpaceBeforeBinaryOperators": true,
     "requireSpaceBeforeBlockStatements": true,
     "requireSpaceBeforeObjectValues": true,
     "requireSpaceBetweenArguments": true,
-    "requireSpacesInAnonymousFunctionExpression": {
-        "beforeOpeningCurlyBrace": true
+    "requireSpacesInConditionalExpression": {
+        "beforeConsequent": true,
+        "beforeAlternate": true
     },
-    "requireSpacesInConditionalExpression": true,
     "requireSpacesInForStatement": true,
     "requireSpacesInFunction": {
         "beforeOpeningCurlyBrace": true
@@ -55,7 +78,10 @@
     "requireSpacesInsideParentheses": "all",
     "validateIndentation": 4,
     "validateParameterSeparator": ", ",
-    "validateQuoteMarks": "'",
-    "esprima": "esprima-fb",
-    "fileExtensions": [".js", ".jsx"]
+    "validateQuoteMarks": {
+        "escape": true,
+        "mark": "'"
+    },
+    "fileExtensions": [".js", ".jsx"],
+    "esprima": "esprima-fb"
 }
