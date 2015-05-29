@@ -54,7 +54,6 @@
     "requirePaddingNewlinesBeforeKeywords": [
         "for", "try", "while", "function", "return"
     ],
-    "requirePaddingNewLinesBeforeLineComments": {"allExcept": "firstAfterCurly"},
     "requireParenthesesAroundIIFE": true,
     "requireQuotedKeysInObjects": true,
     "requireSemicolons": true,
