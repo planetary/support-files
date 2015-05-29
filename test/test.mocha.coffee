@@ -1,6 +1,9 @@
-# Requires: gulp-mocha
-# Requires: env-test
+###
+npm install --save gulp-mocha \
+                   env-test
+###
 path = require 'path'
+
 
 module.exports = (gulp, plugins) ->
     paths =

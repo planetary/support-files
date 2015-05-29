@@ -1,7 +1,10 @@
-// Requires: include-all
-// Requires: gulp
-// Requires: gulp-help
-// Requires: gulp-load-plugins
+/*
+npm install --save include-all \
+                   gulp \
+                   gulp-help \
+                   gulp-load-plugins
+*/
+
 
 // Load plugins
 var plugins = require( 'gulp-load-plugins' )( {

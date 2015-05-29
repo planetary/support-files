@@ -1,8 +1,10 @@
-// Requires: gulp-scss-lint
-// Requires: gulp-scss-lint-stylish
-// Requires: gulp-sourcemaps
-// Requires: gulp-sass
-// Requires: gulp-autoprefixer
+/*
+npm install --save gulp-scss-lint \
+                   gulp-scss-lint-stylish \
+                   gulp-sourcemaps \
+                   gulp-sass \
+                   gulp-autoprefixer \
+*/
 var path = require( 'path' );
 
 

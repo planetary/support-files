@@ -1,5 +1,7 @@
-# Requires: gulp-coffeelint
-# Requires: gulp-nodemon
+###
+npm install --save gulp-coffeelint \
+                   gulp-nodemon
+###
 path = require 'path'
 
 module.exports = (gulp, plugins) ->

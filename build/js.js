@@ -1,9 +1,11 @@
-// Requires: gulp-jshint
-// Requires: gulp-jscs
-// Requires: gulp-jscs-stylish
-// Requires: gulp-sourcemaps
-// Requires: gulp-uglify
-// Requires: gulp-rename
+/*
+npm install --save gulp-jshint \
+                   gulp-jscs \
+                   gulp-jscs-stylish \
+                   gulp-sourcemaps \
+                   gulp-uglify \
+                   gulp-rename
+*/
 var path = require( 'path' );
 
 

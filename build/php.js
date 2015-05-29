@@ -1,4 +1,6 @@
-// Requires: gulp-phplint
+/*
+npm install --save gulp-phplint
+*/
 var path = require( 'path' ),
     phplint = require( 'phplint' ).lint;
 
