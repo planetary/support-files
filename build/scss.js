@@ -11,14 +11,14 @@ var path = require( 'path' );
 module.exports = function( gulp, plugins ) {
     var paths = {
         'watch': [
-            // SCSS files to watch and lint
+            // scss files to watch and lint
             path.resolve( __dirname, '../site/wp-content/themes/edge/styles/components/*.scss' ),
             path.resolve( __dirname, '../site/wp-content/themes/edge/styles/global/*.scss' ),
             path.resolve( __dirname, '../site/wp-content/themes/edge/styles/layouts/*.scss' ),
             path.resolve( __dirname, '../site/wp-content/themes/edge/styles/style.scss' )
         ],
         'build': [
-            // SCSS files to build (TODO: change this to use the airframe build system)
+            // scss files to build (TODO: change this to use the airframe build system)
             path.resolve( __dirname, '../site/wp-content/themes/edge/styles/style.scss' )
         ],
         'output': path.resolve( __dirname, '../site/wp-content/themes/edge' )
