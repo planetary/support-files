@@ -1,6 +1,5 @@
 /*
-npm install --save gulp-mocha \
-                   env-test
+npm install --save gulp-mocha
 */
 path = require( 'path' );
 
@@ -18,7 +17,6 @@ module.exports = function( gulp, plugins ) {
     };
     var config = {
         'timeout': 2000,
-        'require': ['env-test']
     };
 
 

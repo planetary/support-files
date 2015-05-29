@@ -1,6 +1,5 @@
 ###
-npm install --save gulp-mocha \
-                   env-test
+npm install --save gulp-mocha
 ###
 path = require 'path'
 
@@ -17,7 +16,6 @@ module.exports = (gulp, plugins) ->
         ]
     config =
         'timeout': 2000
-        'require': ['env-test']
 
 
     gulp.task 'test:unit', 'runs unit tests using mocha', ->
