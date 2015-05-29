@@ -9,7 +9,7 @@ npm install --save include-all \
 // Load plugins
 var plugins = require( 'gulp-load-plugins' )( {
     // The glob to search for
-    'pattern': [ 'gulp-*', 'merge-*', 'run-*', 'main-*' ],
+    'pattern': [ 'gulp-*' ],
 
     // Remove from the name of the module when adding it to the context...
     'replaceString': /\bgulp[\-.]|run[\-.]|merge[\-.]|main[\-.]/,
