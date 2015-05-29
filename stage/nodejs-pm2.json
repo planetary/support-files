@@ -5,6 +5,6 @@
         "cwd": "/projects/PROJECT NAME GOES HERE/www",
         "env": {
             "NODE_ENV": "production"
-        },
+        }
     }]
 }

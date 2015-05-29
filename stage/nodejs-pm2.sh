@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-project="kepler"
+project="PROJECT NAME GOES HERE"
 
 # kill server to perform migrations
 pm2 show $project
