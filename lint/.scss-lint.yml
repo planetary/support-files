@@ -1,10 +1,13 @@
-# SCSS linting rules. Taken from the default configuration and modified a bit to suit the Planetary
-# Manifest.
+# SCSS linting rules. Taken from the default configuration and modified a bit to suit the
+# Planetary Manifest.
 linters:
   BorderZero:
     enabled: true
 
   ColorKeyword:
+    enabled: false
+
+  ColorVariable:
     enabled: false
 
   Comment:
@@ -21,7 +24,7 @@ linters:
 
   ElsePlacement:
     enabled: true
-    style: same_line # or 'new_line'
+    style: new_line # or 'new_line'
 
   EmptyLineBetweenBlocks:
     enabled: true
@@ -132,6 +135,9 @@ linters:
     enabled: true
 
   UrlQuotes:
+    enabled: true
+
+  VendorPrefix:
     enabled: true
 
   ZeroUnit:

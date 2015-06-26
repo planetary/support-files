@@ -24,6 +24,10 @@
     "disallowSpacesInFunction": {
         "beforeOpeningRoundBrace": true
     },
+    "disallowSpacesInsideArrayBrackets": "all",
+    "disallowSpacesInsideBrackets": true,
+    "disallowSpacesInsideObjectBrackets": "all",
+    "disallowSpacesInsideParentheses": true,
     "disallowTrailingComma": true,
     "disallowTrailingWhitespace": true,
     "disallowYodaConditions": true,
@@ -71,15 +75,12 @@
     "requireSpacesInFunction": {
         "beforeOpeningCurlyBrace": true
     },
-    "requireSpacesInsideArrayBrackets": "all",
-    "requireSpacesInsideBrackets": true,
-    "requireSpacesInsideObjectBrackets": "all",
-    "requireSpacesInsideParentheses": "all",
     "validateIndentation": 4,
     "validateParameterSeparator": ", ",
     "validateQuoteMarks": {
         "escape": true,
         "mark": "'"
     },
-    "fileExtensions": [".js"]
+    "fileExtensions": [".js", ".es6"],
+    "esprima": "esprima-fb"
 }
