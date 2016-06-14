@@ -1,0 +1,39 @@
+server {
+    listen 80;
+    listen [::]:80;
+    server_name PROJECTNAME.clients.io  www.PROJECTNAME.clients.io;
+    return 301 https://$server_name$request_uri;
+}
+
+
+server {
+    # General config
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    server_name PROJECTNAME.clients.io  www.PROJECTNAME.clients.io;
+
+    root /var/www/PROJECTNAME.clients.io;
+    access_log /var/log/nginx/PROJECTNAME.clients.io/access.log;
+    error_log /var/log/nginx/PROJECTNAME.clients.io/error.log;
+
+    # Backend
+    rewrite /wp-admin$ $scheme://$host$uri/ permanent;
+    location /wp-admin {
+        try_files $uri /wp-admin/index.php$is_args$args;
+    }
+
+    # Frontend
+    location / {
+        try_files $uri /index.php$is_args$args;
+    }
+
+    # SSL
+    ssl on;
+    ssl_certificate ssl/clients.io.crt;
+    ssl_certificate_key ssl/clients.io.key;
+    add_header Strict-Transport-Security max-age=15552000;
+
+    # Common
+    include php;
+    include global;
+}

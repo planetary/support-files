@@ -1,0 +1,19 @@
+server {
+    listen 80;
+    listen [::]:80;
+    server_name PROJECTNAME.dev.clients.io  www.PROJECTNAME.dev.clients.io;
+
+    # Serve static files and forward
+    root /var/www/PROJECTNAME.dev.clients.io;
+    try_files $uri /index.php$is_args$args;
+
+    # Increase upload limit
+    client_max_body_size 24M;
+
+    # Logging Settings
+    access_log /var/log/nginx/PROJECTNAME.dev.clients.io/access.log;
+    error_log /var/log/nginx/PROJECTNAME.dev.clients.io/error.log;
+
+    include php;
+    include global;
+}

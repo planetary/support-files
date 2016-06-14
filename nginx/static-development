@@ -1,0 +1,19 @@
+server {
+    listen 80;
+    listen [::]:80;
+    server_name PROJECTNAME.dev.clients.io  www.PROJECTNAME.dev.clients.io;
+
+    root /var/www/PROJECTNAME.dev.clients.io;
+    index /index.html;
+
+    # Strip trailing slashes
+    rewrite ^/(.*)/$ /$1 permanent;
+
+    try_files $uri $uri.html $uri/index.html =404;
+
+    # Logging Settings
+    access_log /var/log/nginx/PROJECTNAME.dev.clients.io/access.log;
+    error_log /var/log/nginx/PROJECTNAME.dev.clients.io/error.log;
+
+    include global;
+}
