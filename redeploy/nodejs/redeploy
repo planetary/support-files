@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+
+# basic config
+environment=production  # should be one of (development, staging, production)
+branch=master  # what branch to deploy
+
+function setup {
+    export NODE_ENV=$environment
+    npm prune || exit 1
+    npm install || exit 2
+    node_modules/.bin/gulp build || exit 3
+    node_modules/.bin/migrate up || exit 4
+}
+
+# further customization; usually there's no need to change any of this
+name=$environment  # overwrite if you don't want to pair with $environment.json
+homedir=~/$environment  # overwrite if using non-default install location
+
+
+# kill server to perform code and data migrations
+pm2 show $environment
+exists=$?
+if [ $exists -eq 0 ]; then
+    pm2 stop $environment
+fi
+
+
+# update code and perms
+cd $homedir/app
+git fetch origin || exit 100
+git reset --hard origin/$branch || exit 101
+setup
+chgrp -Rf www-data . || exit 102
+cd ..
+
+
+# restart server if previously running, else register it for the first time
+if [ $exists -eq 0 ]; then
+    pm2 restart $name || exit 103
+else
+    pm2 start $name.json || exit 104
+fi

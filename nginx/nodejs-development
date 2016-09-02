@@ -1,0 +1,28 @@
+upstream DEPLOYMENTNAME {
+    ip_hash;
+    server 127.0.0.1:PORT1;
+    server 127.0.0.1:PORT2;
+    server 127.0.0.1:PORT3;
+    server 127.0.0.1:PORT4;
+}
+
+
+server {
+    listen 80;
+    listen [::]:80;
+    server_name PROJECTNAME.dev.clients.io  www.PROJECTNAME.dev.clients.io;
+
+    # Serve static files and forward to backend
+    root /var/www/PROJECTNAME.dev.clients.io;
+    location @upstream {
+        proxy_pass http://DEPLOYMENTNAME;
+        proxy_set_header Host $host;
+    }
+    try_files $uri @upstream;
+
+    # Logging Settings
+    access_log /var/log/nginx/PROJECTNAME.dev.clients.io/access.log;
+    error_log /var/log/nginx/PROJECTNAME.dev.clients.io/error.log;
+
+    include global;
+}

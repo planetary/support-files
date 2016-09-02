@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+# basic config
+environment=production  # should be one of (development, staging, production)
+branch=master  # what branch to deploy
+
+function setup {
+    composer install --prefer-source --no-interaction || exit 1
+    npm prune || exit 2
+    npm install || exit 3
+    node_modules/.bin/bower install || exit 4
+    node_modules/.bin/gulp || exit 5
+    node_modules/.bin/gulp bower || exit 6
+    php artisan migrate --force || exit 7
+    php artisan clear-compiled || exit 8
+    php artisan optimize || exit 9
+    chmod -Rf 775 storage || exit 10
+    chmod -Rf 775 bootstrap || exit 11
+    chmod -Rf 775 public/assets || exit 12
+}
+
+# further customization; usually there's no need to change any of this
+homedir=~/$environment  # overwrite if using non-default install location
+
+
+# update code and perms
+cd $homedir/app
+git fetch origin || exit 100
+git reset --hard origin/$branch || exit 101
+setup
+chgrp -Rf www-data . || exit 102
+cd ..
